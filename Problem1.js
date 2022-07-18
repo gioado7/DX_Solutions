@@ -53,5 +53,27 @@ const isVowel = (ch) => { // O(1)
     return ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u';
 }
 
-const test = "Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers";
-console.log(findLongestWord(test)); // O(n) time and O(1) extra memory
+// Testing------------------------------------------------
+
+// sample
+const test1 = "Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers";
+console.log("test1 result: " + findLongestWord(test1)); // O(n) time and O(1) extra memory
+
+const test2 = ""; // empty string
+console.log("test2 result: " + findLongestWord(test2)); // O(n) time and O(1) extra memory
+
+const test3 = "good"; // 1 word
+console.log("test3 result: " + findLongestWord(test3)); // O(n) time and O(1) extra memory
+
+const test4 = "a b c"; // 1 space
+console.log("test4 result: " + findLongestWord(test4)); // O(n) time and O(1) extra memory
+
+const test5 = "a      b  c"; // many spaces
+console.log("test5 result: " + findLongestWord(test5)); // O(n) time and O(1) extra memory
+
+const test6 = "ab ba"; // many answers
+console.log("test6 result: " + findLongestWord(test6)); // O(n) time and O(1) extra memory
+
+const test7 = "a!b!c!d!e!f!g!h!i!j!k!l!m!n!o!p!q!r!s!t!u!v!w!x!y!z %$ *(,./?';][) b@#^:;a    "; // invalid characters
+console.log("valid sentence: " + ignoreInvalidCharacters(test7)); // also test generating of valid sentence with ignoring invalid characters
+console.log("test6 result: " + findLongestWord(test7)); // O(n) time and O(1) extra memory
